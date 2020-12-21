@@ -6,15 +6,16 @@ export const TaskListContext = createContext();
 const TaskListContextProvider =(props)=>{
 
     const [tasks, setTasks] =useState([
-        {task: "Shower", id:1},
-        {task: "Walk doggie", id:2},
-        {task: "Make lunch", id:3}
+        {title: "Shower", id:1},
+        {title: "Walk doggie", id:2},
+        {title: "Make lunch", id:3}
 
     ])
 
     return(
-
+// value will have all the data from this state  
         <TaskListContext.Provider value={{tasks}}>
+            {/* all the components that will be wrapped in the provider */}
           {props.children}
             </TaskListContext.Provider>
     )
