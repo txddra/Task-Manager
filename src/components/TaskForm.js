@@ -16,6 +16,7 @@ const TaskForm = () => {
     const handleSubmit =(e)=>{
         e.preventDefault();
         addTask(title);
+        setTitle("");
     };
 
     return (
