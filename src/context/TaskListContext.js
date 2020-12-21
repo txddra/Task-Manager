@@ -20,8 +20,8 @@ const TaskListContextProvider =(props)=>{
 
     };
 
-    const removeTask  =()=>{
-        setTasks(task.filter(task=>{task.id !== id}))
+    const removeTask =(id)=>{
+        setTasks(tasks.filter((task) =>task.id !== id))
     }
 
     return(
