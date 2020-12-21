@@ -3,7 +3,7 @@ import { TaskListContext } from "../context/TaskListContext";
 
 const TaskForm = () => {
 
-    const {addTask} = useContext(TaskListContext);
+    const {addTask, clearList} = useContext(TaskListContext);
 
     const [title, setTitle] = useState("")
 
@@ -35,6 +35,7 @@ const TaskForm = () => {
                 type="submit"
                 className="btn add-task-btn">Add Task</button>
                 <button
+                onClick={clearList}
                 className="btn clear-btn">Clear Task</button>
             </div>
         </form>

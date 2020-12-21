@@ -24,9 +24,13 @@ const TaskListContextProvider =(props)=>{
         setTasks(tasks.filter((task) =>task.id !== id))
     }
 
+    const clearList =()=>{
+        setTasks([]);
+    }
+
     return(
 // value will have all the data from this state  
-        <TaskListContext.Provider value={{tasks, addTask, removeTask}}>
+        <TaskListContext.Provider value={{tasks, addTask, removeTask, clearList}}>
             {/* all the components that will be wrapped in the provider */}
           {props.children}
             </TaskListContext.Provider>
