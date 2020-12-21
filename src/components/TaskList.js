@@ -7,7 +7,8 @@ const TaskList= ()=>{
     return <div>
             <ul className ="list">
             {tasks.map((task)=>{
-                return <Task />;
+                //assigns the property, and assign to current task item
+                return <Task task={task}/>;
             })}
    
 
