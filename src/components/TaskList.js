@@ -8,7 +8,7 @@ const TaskList= ()=>{
             <ul className ="list">
             {tasks.map((task)=>{
                 //assigns the property, and assign to current task item
-                return <Task task={task}/>;
+                return <Task task={task} key ={task.id}/>;
             })}
    
 
