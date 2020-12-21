@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import { TaskListContext } from "../context/TaskListContext";
 
 const TaskForm = () => {
@@ -9,12 +9,15 @@ const TaskForm = () => {
 
     const handleChange= (e)=>{
 
-        setTitle(e.target.value)
+        setTitle(e.target.value);
+        
     };
 
     const handleSubmit =(e)=>{
-        e.preventDefault()
-    }
+        e.preventDefault();
+        addTask(title);
+    };
+
     return (
         <form 
         onSubmit ={handleSubmit}
